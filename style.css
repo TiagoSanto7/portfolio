@@ -389,7 +389,7 @@ body {
 .skill-name {
   font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 10px;
 }
 
