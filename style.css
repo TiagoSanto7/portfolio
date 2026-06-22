@@ -1,0 +1,34 @@
+/* === RESET === */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === VARIABLES === */
+:root {
+  --sidebar-width: 230px;
+  --color-bg: #ffffff;
+  --color-sidebar: #111111;
+  --color-text: #111111;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+  --color-border: #f0f0f0;
+  --color-tag-bg: #eeeeee;
+  --color-card-bg: #f8f8f8;
+  --color-accent: #22c55e;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --transition: 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  min-height: 100vh;
+}
