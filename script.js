@@ -46,19 +46,21 @@
     document.body.style.overflow = '';
   }
 
-  hamburger.addEventListener('click', () => {
-    const isOpen = sidebar.classList.contains('sidebar--open');
-    isOpen ? closeMenu() : openMenu();
-  });
-
-  overlay.addEventListener('click', closeMenu);
-
-  // Fechar menu ao clicar em link de navegação (mobile)
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth < 768) closeMenu();
+  if (hamburger && sidebar && overlay) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = sidebar.classList.contains('sidebar--open');
+      isOpen ? closeMenu() : openMenu();
     });
-  });
+
+    overlay.addEventListener('click', closeMenu);
+
+    // Fechar menu ao clicar em link de navegação (mobile)
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) closeMenu();
+      });
+    });
+  }
 
   // === CONTACT FORM ===
   const form = document.getElementById('contato-form');
