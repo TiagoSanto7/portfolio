@@ -313,3 +313,41 @@ body {
   color: var(--color-text-secondary);
   line-height: 1.8;
 }
+
+/* === SOLUÇÕES === */
+.solucoes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.solucao-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 28px;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.solucao-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-color: #ddd;
+}
+
+.solucao-icon {
+  font-size: 24px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.solucao-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.solucao-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
