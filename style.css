@@ -32,3 +32,136 @@ body {
   display: flex;
   min-height: 100vh;
 }
+
+/* === SIDEBAR === */
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  background: var(--color-sidebar);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px;
+  height: 100%;
+}
+
+.sidebar-brand {
+  margin-bottom: 48px;
+}
+
+.sidebar-name {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.sidebar-role {
+  display: block;
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #888;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.nav-link::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.4;
+  flex-shrink: 0;
+  transition: opacity var(--transition);
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+.nav-link.active {
+  background: #fff;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.nav-link.active::before {
+  opacity: 1;
+}
+
+.sidebar-social {
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.social-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.social-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Hamburger — hidden on desktop */
+.hamburger {
+  display: none;
+}
+
+/* Overlay — hidden by default */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 90;
+}
+
+/* === MAIN === */
+.main {
+  flex: 1;
+  overflow-x: hidden;
+}
