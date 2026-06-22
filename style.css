@@ -351,3 +351,63 @@ body {
   color: var(--color-text-muted);
   line-height: 1.7;
 }
+
+/* === STACK === */
+.stack-context {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 580px;
+  margin-bottom: 28px;
+  padding: 16px 20px;
+  background: var(--color-card-bg);
+  border-left: 3px solid #ddd;
+  border-radius: 0 6px 6px 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.skill-card {
+  background: var(--color-card-bg);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.skill-category {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: 6px;
+}
+
+.skill-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  background: var(--color-tag-bg);
+  color: #666;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.tag--highlight {
+  background: var(--color-text);
+  color: #fff;
+}
