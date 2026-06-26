@@ -314,6 +314,18 @@ body {
   line-height: 1.8;
 }
 
+.sobre-link {
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  transition: border-color var(--transition);
+}
+
+.sobre-link:hover {
+  border-color: var(--color-text);
+}
+
 /* === SOLUÇÕES === */
 .solucoes-grid {
   display: grid;
@@ -367,7 +379,7 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 
@@ -413,31 +425,64 @@ body {
 }
 
 /* === PROJETOS === */
-.projetos-placeholder {
-  border: 2px dashed #e0e0e0;
-  border-radius: 12px;
-  padding: 56px 40px;
-  text-align: center;
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.projeto-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.projeto-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-color: #ddd;
+}
+
+.projeto-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
 }
 
-.projetos-placeholder-icon {
-  font-size: 32px;
-  margin-bottom: 8px;
-}
-
-.projetos-placeholder-title {
-  font-size: 16px;
-  font-weight: 700;
+.projeto-tipo {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: #bbb;
 }
 
-.projetos-placeholder-desc {
+.projeto-link-ext {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.projeto-link-ext:hover {
+  color: var(--color-text);
+}
+
+.projeto-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--color-text);
+}
+
+.projeto-desc {
   font-size: 13px;
-  color: #ccc;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  flex: 1;
 }
 
 /* === COMO TRABALHO === */
@@ -677,6 +722,7 @@ body {
   /* Grids viram 1 coluna */
   .solucoes-grid,
   .skills-grid,
+  .projetos-grid,
   .contato-layout {
     grid-template-columns: 1fr;
   }
